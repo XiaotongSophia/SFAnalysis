@@ -176,7 +176,7 @@ def plpval(x, alpha, xmin, gof):
         if time.time() - starttime > 500:
             if resamp_ind > num_resamps/20.:
                 if current_p<0.05 or current_p>0.5:
-                    print "current p = %s   elapsed time = %s" %(current_p, time.time()-starttime)
+                    print ("current p = %s   elapsed time = %s" %(current_p, time.time()-starttime))
                     return current_p
     p = np.sum(bootstraps>=gof)/float(num_resamps)
     print "p = %.3f   elapsed time = %s" %(p, time.time()-starttime)
